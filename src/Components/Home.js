@@ -12,10 +12,10 @@ class Home extends React.Component {
       <>
         <Navbar/>
         <div class="jumbotron">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <h1 class="display-4">IDLareact</h1>
+            <p class="lead">Look it 's just an ordinary Website it's just for a pedagogic purpose not for work </p>
             <hr class="my-4"/>
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <p>It's Created with React js a framework of javascript using component to navigate and connect and validate informations with a Laravel API a framework of PHP with Axios </p>
 
         </div>
       </>
