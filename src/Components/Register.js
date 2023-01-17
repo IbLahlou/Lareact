@@ -81,32 +81,32 @@ import {Navigate} from 'react-router-dom'
     return (
       <>
      <Navbar />
-     <div class="container w-50">
-      <h2 class="text-center my-5">Inscription</h2>
+     <div className="container w-50">
+      <h2 className="text-center my-5">Inscription</h2>
        <form method="POST" onSubmit={this.handelSubmit}>
-         <div class="form-group">
+         <div className="form-group">
             <label for="exampleInputEmail1">Nom</label>
-            <input onChange={this.handelNameChange} type="text" class={`form-control ${this.state.errors && this.state.errors.name ? "is-invalid":""}`} id="exampleInputEmail1" aria-describedby="emailHelp" />
-            { this.state.errors && this.state.errors.name ?  <div class="text-danger invalide-feedback">{this.state.errors['name']}</div> :  ''}
+            <input onChange={this.handelNameChange} type="text" className={`form-control ${this.state.errors && this.state.errors.name ? "is-invalid":""}`} id="exampleInputEmail1" aria-describedby="emailHelp" />
+            { this.state.errors && this.state.errors.name ?  <div className="text-danger invalide-feedback">{this.state.errors['name']}</div> :  ''}
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="exampleInputEmail1">Adresse Email</label>
-            <input onChange={this.handelEmailChange} type="email" class={`form-control ${this.state.errors && this.state.errors.email ? "is-invalid":""}`} id="exampleInputEmail1" aria-describedby="emailHelp" />
-            <small  id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            { this.state.errors && this.state.errors.email ?  <div class="text-danger invalide-feedback">{this.state.errors['email']}</div> :  ''}
+            <input onChange={this.handelEmailChange} type="email" className={`form-control ${this.state.errors && this.state.errors.email ? "is-invalid":""}`} id="exampleInputEmail1" aria-describedby="emailHelp" />
+            <small  id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+            { this.state.errors && this.state.errors.email ?  <div className="text-danger invalide-feedback">{this.state.errors['email']}</div> :  ''}
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="exampleInputPassword1">Mot de passe</label>
-            <input onChange={this.handelPasswordChange} type="password" class={`form-control ${this.state.errors && this.state.errors.password ? "is-invalid":""}`} id="exampleInputPassword1" />
-            { this.state.errors && this.state.errors.password ?  <div class="text-danger invalide-feedback">{this.state.errors['password']}</div> :  ''}
+            <input onChange={this.handelPasswordChange} type="password" className={`form-control ${this.state.errors && this.state.errors.password ? "is-invalid":""}`} id="exampleInputPassword1" />
+            { this.state.errors && this.state.errors.password ?  <div className="text-danger invalide-feedback">{this.state.errors['password']}</div> :  ''}
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="exampleInputPassword1">Confirmation du mot de passe</label>
-            <input onChange={this.handelConfirmPasswordChange} type="password" class={`form-control ${this.state.errors && this.state.errors.confirm_password ? "is-invalid":""}`} id="exampleInputPassword1" />
-            { this.state.errors && this.state.errors.confirm_password ?  <div class="text-danger invalide-feedback">{this.state.errors['confirm_password']}</div> :  ''}
+            <input onChange={this.handelConfirmPasswordChange} type="password" className={`form-control ${this.state.errors && this.state.errors.confirm_password ? "is-invalid":""}`} id="exampleInputPassword1" />
+            { this.state.errors && this.state.errors.confirm_password ?  <div className="text-danger invalide-feedback">{this.state.errors['confirm_password']}</div> :  ''}
           </div>
 
-          <button type="submit" class="btn btn-primary">M'inscrire</button>
+          <button type="submit" className="btn btn-primary">M'inscrire</button>
        </form>
       </div>
       </>

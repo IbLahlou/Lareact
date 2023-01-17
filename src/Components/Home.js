@@ -1,27 +1,52 @@
 import React from 'react'
 import Navbar from './Navbar';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-
-class Home extends React.Component {
+export default class Home extends React.Component {
     constructor(){
         super()
         this.state ={}
     }
+    componentDidMount(){
+      axios.get('http://127.0.0.1:8000/api/pictures')
+        .then(res=>{
+          this.setState({pictures : res.data})
+        })
+        .catch(error =>{
+          console.log(error.response)
+        })
+    }
+
   render() {
     return (
       <>
         <Navbar/>
-        <div class="jumbotron">
-            <h1 class="display-4">IDLareact</h1>
-            <p class="lead">Look it 's just an ordinary Website it's just for a pedagogic purpose not for work </p>
-            <hr class="my-4"/>
-            <p>It's Created with React js a framework of javascript using component to navigate and connect and validate informations with a Laravel API a framework of PHP with Axios </p>
+        <div className="container my-5">
+          <div className="row justify-content-center">
+            {
+          this.state.pictures?.map((picture)=>
+          
 
+            <div className="card mx-2 my-3" style={{ width: "350px"}}>
+                <img className="card-img-top" src={`http://127.0.0.1:8000/storage/pictures/${picture.image}`} alt="Card image cap"/>
+                <div className="card-body">
+                  <h5 className="card-title">{picture.title}</h5>
+                  <p className="card-text">{picture.description}</p>
+                  <Link to={`/pictures/${picture.id}`} className="btn btn-primary">En Savoir Plus</Link>
+                </div>
+            </div>
+        )
+        }
+          </div>
         </div>
       </>
+        
+      
     )
   }
-}
 
-export default Home;
+
+
+}
 
